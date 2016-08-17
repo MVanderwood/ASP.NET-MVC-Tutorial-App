@@ -9,9 +9,7 @@ namespace MVCTutoialApp.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "MVCTutoialApp.Models.MVCTutoialAppContext";
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MVCTutoialApp.Models.MVCTutoialAppContext context)
