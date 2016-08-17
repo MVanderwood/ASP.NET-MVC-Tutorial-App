@@ -19,8 +19,6 @@ namespace MVCTutoialApp.Models
         {
         }
 
-        public System.Data.Entity.DbSet<MVCTutoialApp.Models.Review> Reviews { get; set; }
-
-        public System.Data.Entity.DbSet<MVCTutoialApp.Models.Album> Albums { get; set; }
+        public System.Data.Entity.DbSet<MVCTutoialApp.Models.Artist> Artists { get; set; }
     }
 }
