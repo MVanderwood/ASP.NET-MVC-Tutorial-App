@@ -10,6 +10,7 @@ using MVCTutoialApp.Models;
 
 namespace MVCTutoialApp.Controllers
 {
+    // [RoutePrefix("Albums")]
     public class AlbumsController : Controller
     {
         private MVCTutoialAppContext db = new MVCTutoialAppContext();
@@ -20,12 +21,14 @@ namespace MVCTutoialApp.Controllers
             return View(albums);
         }
         // GET: Albums
+        // [Route("Albums")]
         public ActionResult Index()
         {
             return View(db.Albums.ToList());
         }
 
         // GET: Albums/Details/5
+        // [Route("Albums/Details/{id:int}")]
         public ActionResult Details(int? id)
         {
             if (id == null)
