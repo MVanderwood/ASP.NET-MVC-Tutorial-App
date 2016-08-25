@@ -80,7 +80,7 @@ namespace MVCTutoialApp.Controllers
         // POST: Albums/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Title,AmountSold,Sales")] Album album)
+        public ActionResult Edit([Bind(Include = "AlbumID,Title,AmountSold,Sales")] Album album)
         {
             if (ModelState.IsValid)
             {
