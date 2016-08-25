@@ -9,12 +9,8 @@ namespace MVCTutoialApp.Models
         public int AlbumID { get; set; }
 
         [Required()]
-        public string Name { get; set; }
+        public string Title { get; set; }
 
-        [Required()]
-        public int ArtistID { get; set; }
-
-        [Required()]
         public virtual Artist Artist { get; set; }
 
         public virtual List<Review> Reviews { get; set; }
