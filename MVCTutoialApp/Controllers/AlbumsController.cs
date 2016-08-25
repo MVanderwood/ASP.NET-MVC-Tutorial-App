@@ -15,11 +15,6 @@ namespace MVCTutoialApp.Controllers
     {
         private MVCTutoialAppContext db = new MVCTutoialAppContext();
 
-        public ActionResult DisplayByArtist(int artistID)
-        {
-            var albums = db.Albums.ToList();
-            return View(albums);
-        }
         // GET: Albums
         // [Route("Albums")]
         public ActionResult Index()
@@ -28,7 +23,7 @@ namespace MVCTutoialApp.Controllers
         }
 
         // GET: Albums/Details/5
-        // [Route("Albums/Details/{id:int}")]
+        [Route("Albums/{id:int}")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,7 +38,7 @@ namespace MVCTutoialApp.Controllers
             return View(album);
         }
 
-        // GET: Albums/Create
+        [Route("Albums/New")]
         public ActionResult Create()
         {
             return View();
@@ -51,7 +46,6 @@ namespace MVCTutoialApp.Controllers
 
         // POST: Albums/Create
         [HttpPost]
-        [Authorize()]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Album album)
         {
